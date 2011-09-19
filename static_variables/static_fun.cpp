@@ -4,7 +4,7 @@ using namespace std;
 
 void showstat (int curr)
 {
-  int nStatic;
+  static int nStatic;
   nStatic += curr;
   cout << "nStatic is " << nStatic << endl;
 }
