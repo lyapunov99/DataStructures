@@ -1,0 +1,16 @@
+#include <iostream>
+
+using namespace std;
+
+int* foo()
+{
+  int count;
+  count = 18;
+  return &count;
+}
+
+int main()
+{
+  int *d;
+  d = foo();
+}
