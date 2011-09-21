@@ -22,7 +22,7 @@ void pointerFun()
     cout << "Is rectangle 2 a square? " << r2->isSquare() << endl;
     delete r2;
     Rect *r3 = new Rect(8, 8);
-    r3->setId("*** rect 3 inside pointerFun() ***");
+    r2->setId("*** rect 3 inside pointerFun() ***");
     cout << "The area of the rectangle 3 is " << r3->getArea() << endl;
     cout << "The permimeter of the rectangle 3 is " << r3->getPerimeter() << endl;
     cout << "The diagonal of the rectangle 3 is " << r3->getDiagonal() << endl;
