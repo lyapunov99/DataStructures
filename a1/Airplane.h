@@ -25,7 +25,7 @@ public:
     // The constructors
     Airplane();
     Airplane (string flightNum,
-              string from,
+              string origin,
               string destination,
               string description,
               int numPassengers);
