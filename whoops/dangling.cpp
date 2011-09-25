@@ -4,7 +4,7 @@ using namespace std;
 
 int* foo()
 {
-  int count;
+  static int count;
   count = 18;
   cout << "Value of local variable count: " << count << endl;
   cout << "Address of local variable count: " << &count << endl;

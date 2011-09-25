@@ -1,6 +1,7 @@
 //
 //  Rect.cpp (the implementation)
 //
+//  Edit (9/25/2011): Special thanks to A.J. Jenkins (student in COMP 15) for pointing out that I didn't accomodate invariant correctly in constructors
 //  Created by Ming Chow on 9/21/11.
 //
 
@@ -22,8 +23,20 @@ Rect::Rect()
 
 Rect::Rect (int length, int width)
 {
-    this->length = length;
-    this->width = width;
+    if (length >= 0) {
+        this->length = length;
+    }
+    else {
+        cout << "Length has to be >= 0" << endl;
+        this->length = 0;
+    }
+    if (width >= 0) {
+        this->width = width;
+    }
+    else {
+        cout << "Width has to be >= 0" << endl;
+        this->width = 0;
+    }
     x = 0;
     y = 0;
     id = "";
@@ -32,8 +45,20 @@ Rect::Rect (int length, int width)
 
 Rect::Rect (int length, int width, int x, int y)
 {
-    this->length = length;
-    this->width = width;
+    if (length >= 0) {
+        this->length = length;
+    }
+    else {
+        cout << "Length has to be >= 0" << endl;
+        this->length = 0;
+    }
+    if (width >= 0) {
+        this->width = width;
+    }
+    else {
+        cout << "Width has to be >= 0" << endl;
+        this->width = 0;
+    }
     this->x = x;
     this->y = y;
     id = "";
