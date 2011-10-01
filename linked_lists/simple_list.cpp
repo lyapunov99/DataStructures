@@ -38,18 +38,40 @@ int main()
   }
 
   // Traversing list
+  cout << "***** Traversing..." << endl;
   visitor = head;
   while (visitor != NULL) {
     cout << visitor->destination << endl;
     visitor = visitor->next;
   }
+  
+  // Reverse the linked list
+  cout << "***** Reversing..." << endl;
+  visitor = head;
+  Node *reverse = NULL;
+  Node *temp;
+  while (visitor != NULL) {
+    temp = visitor->next;
+    visitor->next = reverse;
+    reverse = visitor;
+    visitor = temp;
+  }
+  delete temp;
 
-  // Delete entire list
+  // Print reversed list
+  visitor = reverse;
+  while (visitor != NULL) {
+    cout << visitor->destination << endl;
+    visitor = visitor->next;
+  }
+
+  // Delete the reverse list
   delete visitor;
-  while (head != NULL) {
-    Node *dump = head;
-    head = head->next;
+  while (reverse != NULL) {
+    Node *dump = reverse;
+    reverse = reverse->next;
     delete dump;
   }
+
   return 0;
 }
