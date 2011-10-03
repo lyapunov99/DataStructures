@@ -48,7 +48,7 @@ public:
     // Description: add telephone number for contact
     // Preconditions: telephoneNumbers is NULL or not empty; telephoneNumber is legitimate
     // Post-conditions: telephoneNumbers is not empty; telephone number is added to end of list
-    void addTelephoneNumber(string telephoneNumber);
+    void addTelephoneNumber(string telephoneNumber, string description);
 
     // Description: remove telephone number for contact
     // Preconditions: telephoneNumbers is NULL or not empty; telephoneNumber is legitimate
@@ -58,7 +58,7 @@ public:
     // Description: add e-mail address for contact
     // Preconditions: emailAddresses is NULL or not empty; emailAddress is legitimate
     // Post-conditions: emailAddress is not empty; e-mail address is added to end of list
-    void addEmailAddress(string emailAddress);
+    void addEmailAddress(string emailAddress, string description);
     
     // Description: remove e-mail address for contact
     // Preconditions: emailAddresses is NULL or not empty; emailAddress is legitimate
