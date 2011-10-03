@@ -16,7 +16,7 @@ int main (int argc, const char * argv[])
     Contact *c = new Contact("Ming", "Chow", "mchow@cs.tufts.edu");
     cout << c->getFirstName() << " " << c->getLastName() << endl;
     email *addresses = c->getEmailAddresses();
-    c->addEmailAddress("ming.chow@tufts.edu", "Work");
+    c->addEmailAddress("ming.chow@tufts.edu");
     while (addresses != NULL) {
         cout << addresses->value << endl;
         addresses = addresses->next;
