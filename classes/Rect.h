@@ -34,7 +34,20 @@ public:
     Rect();
     Rect(int length, int width);
     Rect(int length, int width, int x, int y);
-    
+
+    // Description: A friend function to "double" a rectangle
+    friend Rect doubleRect(Rect r2);
+
+    // Description: Sum the length and width of two rectangles; x, y are the same as original rect
+    // Precondition: r2 is legitimate
+    // Postcondition: returns a new Rect that contains the sum of the lengths and widths of two rects
+    Rect operator+ (Rect r2);
+
+    // Description: Checks if both rectangles have same length and width (or r1.length = r2.width and r1.width = r2.length; i.e., r2 is inverted), ignoring x and y
+    // Precondition: r2 is legitimate
+    // Postcondition: returns true if both rectangles share the same dimensions (and area)
+    bool operator== (Rect r2);
+
     // Precondition: length and width are legitimate
     // Postcondition: result >= 0
     int getArea();

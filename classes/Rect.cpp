@@ -2,7 +2,7 @@
 //  Rect.cpp (the implementation)
 //
 //  Edit (9/25/2011): Special thanks to A.J. Jenkins (student in COMP 15) for pointing out that I didn't accomodate invariant correctly in constructors
-//  Created by Ming Chow on 9/21/11.
+//  Created by Ming Chow on 9/21/2011; updated on 10/5/2011
 //
 
 #include <iostream>
@@ -63,6 +63,21 @@ Rect::Rect (int length, int width, int x, int y)
     this->y = y;
     id = "";
     cout << "In constructor 3" << endl;
+}
+
+Rect Rect::operator+ (Rect r2)
+{
+  Rect newRect;
+  newRect.length = length + r2.length;
+  newRect.width = width + r2.width;
+  newRect.x = x;
+  newRect.y = y;
+  return newRect;
+}
+
+bool Rect::operator== (Rect r2)
+{
+  return ((length == r2.length && width == r2.width) || (length == r2.width && width == r2.length));
 }
 
 int Rect::getArea()
