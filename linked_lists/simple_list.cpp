@@ -59,6 +59,7 @@ int main()
   delete temp;
 
   // Print reversed list
+  cout << "***** Printing reversed list..." << endl;
   visitor = reverse;
   while (visitor != NULL) {
     cout << visitor->destination << endl;
@@ -66,12 +67,19 @@ int main()
   }
 
   // Delete the reverse list
-  delete visitor;
+  cout << "***** Deleting reversed list..." << endl;
   while (reverse != NULL) {
     Node *dump = reverse;
     reverse = reverse->next;
     delete dump;
   }
 
+  // Deleting the original list
+  /*cout << "***** Deleting the original list..." << endl;
+  while (head != NULL) {
+    Node *dump = head;
+    head = head->next;
+    delete dump;
+    }*/
   return 0;
 }

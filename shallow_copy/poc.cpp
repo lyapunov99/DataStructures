@@ -16,7 +16,6 @@ int main (int argc, const char * argv[])
     cout << "\nOutside of block: printing r1..." << endl;
     r1.print();
     
-    {
         cout << "\nIn block: copying r1 into r2..." << endl;
         Rando r2 = r1;
         cout << " Memory address of r1 is " << &r1 << endl;
@@ -28,7 +27,7 @@ int main (int argc, const char * argv[])
         cout << "\nIn block: printing r1, see if change to r2 takes effect in r1..." << endl;
         r1.print();
         cout << "\nIn block: exiting, going out of scope..." << endl;        
-    }
+    
     cout << "Before return..." << endl;
     return 0;
 }
