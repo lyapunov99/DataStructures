@@ -56,7 +56,6 @@ int main()
     reverse = visitor;
     visitor = temp;
   }
-  delete temp;
 
   // Print reversed list
   cout << "***** Printing reversed list..." << endl;

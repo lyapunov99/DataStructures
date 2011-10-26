@@ -36,5 +36,5 @@ bool CharTree::isEmpty()
 
 CharTree::~CharTree()
 {
-    // ????
+    delete root;
 }
