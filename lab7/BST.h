@@ -13,8 +13,8 @@ using namespace std;
 
 struct Node {
     string word;
-	Node *left;
-	Node *right;
+    Node *left;
+    Node *right;
 };
 
 class BST
