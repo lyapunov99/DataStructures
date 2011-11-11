@@ -73,7 +73,8 @@ int main (int argc, const char * argv[])
                     break;
                 case 'D': // Departing signal
                     gettimeofday(&start, NULL);
-                    if (!departing.isEmpty()) {
+		    empty = departing.isEmpty();
+                    if (!empty) {
                         temp = departing.dequeue();
                     }
                     gettimeofday(&end, NULL);
