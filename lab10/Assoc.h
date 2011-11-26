@@ -29,9 +29,9 @@ private:
     unsigned int hash(string key);
     
 public:
-	// Description: instantiates associative array of string key-string value mappings
-	// Precondition: associative array is undefined
-	// Postcondition: number of elements in associative array is 0
+    // Description: instantiates associative array of string key-string value mappings
+    // Precondition: associative array is undefined
+    // Postcondition: number of elements in associative array is 0
     Assoc();
     
     // Description: adds string key to associative array with corresponding string value
