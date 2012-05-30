@@ -1,7 +1,0 @@
-An example of C++ shallow copying.
-
-To compile, run: g++ poc.cpp Rando.cpp
-
-To run, run: ./a.out
-
-This will seg fault!
