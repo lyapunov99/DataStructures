@@ -11,17 +11,17 @@ int main()
   string str = "Batman";
   transform(str.begin(), str.end(),str.begin(), ::toupper);
   cout << str << endl;
-  if (str.compare("Batman")) {
-    cout << "No match" <<endl;
-  }
-  else {
-    cout << "MATCH!" << endl;
-  }
-  if (str.compare("BATMAN")) {
-    cout << "Nomatch" <<endl;
-  }
-  else {
+  if (str.compare("Batman") == 0) {
     cout << "MATCH!" <<endl;
+  }
+  else {
+    cout << "No match" << endl;
+  }
+  if (str.compare("BATMAN") == 0) {
+    cout << "MATCH!" <<endl;
+  }
+  else {
+    cout << "No match" <<endl;
   }
   return 0;
 }
