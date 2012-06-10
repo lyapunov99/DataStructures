@@ -1,0 +1,5 @@
+To compile and test airplane_test.cpp on linux.cs.tufts.edu:
+
+g++ -Wall -Werror -g airplane_test.cpp a2.o
+
+To run: ./a.out
