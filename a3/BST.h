@@ -46,7 +46,7 @@ public:
 
     // Description: deletes a word from the tree, *** case insensitive ***
     // Postcondition: returns true if word is deleted, otherwise false
-    bool delete (string word);
+    bool deleteNode (string word);
 
     ~BST();
     
