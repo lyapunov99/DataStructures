@@ -34,49 +34,56 @@ int go (int dir)
   }
 }
 
-// make a really simple maze to test with
 //  start
-//  0 ---> 1 ---> 2 (gold)    N
-//  |      |      |           ^
+//  0 <--> 1 <--> 2 (gold)    N
+//  ^      ^      ^           ^
 //  v      v      v           |
-//  3 ---> 4 ---> 5      W<---*--->E
-//  |      |      |           |
+//  3 <--> 4 <--> 5      W<---*--->E
+//  ^      ^      ^           |
 //  v      v      v           v
-//  6 ---> 7 ---> 8           S
+//  6 <--> 7 <--> 8           S
 //             exit
 
-int main(int argc, char **argv)
+
+
+int main (int argc, char **argv)
 {
-  // Initialize maze
   for (int i = 0; i < ROOMS; i++) {
     dungeon[i].number = i;
   }
-
-  // Construct maze
-  dungeon[0].dirs[EAST] = &dungeon[1]; 	// 0 --> 1 --> 2
+  dungeon[0].dirs[EAST] = &dungeon[1]; // 0 <-> 1 <-> 2
+  dungeon[1].dirs[WEST] = &dungeon[0];
   dungeon[1].dirs[EAST] = &dungeon[2];
-  dungeon[3].dirs[EAST] = &dungeon[4]; 	// 3 --> 4 --> 5
+  dungeon[2].dirs[WEST] = &dungeon[1];
+  dungeon[3].dirs[EAST] = &dungeon[4]; // 3 <-> 4 <-> 5
+  dungeon[4].dirs[WEST] = &dungeon[3];
   dungeon[4].dirs[EAST] = &dungeon[5];
-  dungeon[6].dirs[EAST] = &dungeon[7];  // 6 --> 7 --> 8
+  dungeon[5].dirs[WEST] = &dungeon[4];
+  dungeon[6].dirs[EAST] = &dungeon[7];  // 6 <-> 7 <-> 8
+  dungeon[7].dirs[WEST] = &dungeon[6];
   dungeon[7].dirs[EAST] = &dungeon[8];
-  dungeon[0].dirs[SOUTH] = &dungeon[3];	// 0 --> 3 --> 6
+  dungeon[8].dirs[WEST] = &dungeon[7];
+  dungeon[0].dirs[SOUTH] = &dungeon[3]; // 0 <-> 3 <-> 6
+  dungeon[3].dirs[NORTH] = &dungeon[0];
   dungeon[3].dirs[SOUTH] = &dungeon[6];
-  dungeon[1].dirs[SOUTH] = &dungeon[4];	// 1 --> 4 --> 7
+  dungeon[6].dirs[NORTH] = &dungeon[3];
+  dungeon[1].dirs[SOUTH] = &dungeon[4]; // 1 <-> 4 <-> 7
+  dungeon[4].dirs[NORTH] = &dungeon[1];
   dungeon[4].dirs[SOUTH] = &dungeon[7];
-  dungeon[2].dirs[SOUTH] = &dungeon[5];	// 2 --> 5 --> 8
+  dungeon[7].dirs[NORTH] = &dungeon[4];
+  dungeon[2].dirs[SOUTH] = &dungeon[5]; // 2 <-> 5 <-> 8
+  dungeon[5].dirs[NORTH] = &dungeon[2];
   dungeon[5].dirs[SOUTH] = &dungeon[8];
+  dungeon[8].dirs[NORTH] = &dungeon[5];
   dungeon[2].contents |= GOLD;
   dungeon[8].contents |= EXIT;
-
-  // Set up starting location and call quest
   now = &dungeon[0];
-  quest(&dungeon[0], ROOMS);
+  quest(&dungeon[0],ROOMS);
   if (now == &dungeon[8]) {
-    cout << "Congratulations, you found the exit!" << endl;
-    return 0;
+    cout << "you found the exit!" << endl;
   }
   else {
-    cout << "You ended in room " << now->number << " and missed the exit!  Thus, you die a slow painful death..." << endl;
-    return 1;
+    cout << "you ended in room " << now->number << " and missed the exit!" << endl;
   }
+  return 0;
 }
