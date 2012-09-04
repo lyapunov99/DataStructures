@@ -1,3 +1,0 @@
-To compile: g++ -Wall -Werror -g main.cpp List.cpp
-
-To check for memory errors: valgrind ./a.out

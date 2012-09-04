@@ -1,3 +1,0 @@
-To compile:
-
-g++ -Wall -Werror main.cpp Airplane.cpp
