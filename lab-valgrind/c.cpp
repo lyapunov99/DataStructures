@@ -18,6 +18,6 @@ int main()
 		cout << winningNums[count] << " ";
 	}
 	cout << endl;
-	delete winningNums;
+	delete [] winningNums;
 	return 0;
 }

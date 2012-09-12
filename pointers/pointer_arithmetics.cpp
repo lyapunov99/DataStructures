@@ -14,10 +14,10 @@ int main()
   }
   int *copyOfLottery = lottery;
   cout << endl;
-  cout << "&copyOfLottery is " << copyOfLottery << endl;
+  cout << "copyOfLottery is " << copyOfLottery << endl;
   cout << endl;
-  cout << "The content inside the 3rd slot of copyOfLottery is " << *(copyOfLottery + 3) << endl;
-  cout << "The content inside the 2nd slot of copyOfLottery is " << *(copyOfLottery + 2) << endl;
-  cout << "The content inside the 1st slot of copyOfLottery is " << *(copyOfLottery + 1) << endl;
+  cout << "The content inside the 4th slot of copyOfLottery is " << *(copyOfLottery + 3) << endl;
+  cout << "The content inside the 3rd slot of copyOfLottery is " << *(copyOfLottery + 2) << endl;
+  cout << "The content inside the 2nd slot of copyOfLottery is " << *(copyOfLottery + 1) << endl;
   return 0;
 }
