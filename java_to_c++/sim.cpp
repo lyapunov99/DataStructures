@@ -1,4 +1,4 @@
-#include "Dog.h"
+#include "dog.h"
 
 int main(int argc, char *argv[])
 {

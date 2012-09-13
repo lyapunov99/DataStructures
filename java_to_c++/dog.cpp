@@ -1,7 +1,4 @@
-#include <iostream>
 #include "dog.h"
-
-using namespace std;
 
 Dog::Dog()
 {
