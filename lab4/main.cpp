@@ -61,13 +61,6 @@ int main() {
 	cout << endl;
 	cout << endl;
 
-	cout << "Quiet down, Quinn's in Town" << endl;
-	cout << "printing levelorder: ";
-	testTree.levelOrder();
-	cout << endl;
-	cout <<"Answer:              54 22 74 17 41 76 36 45 82 30 26 27";
-	cout << endl;
-	cout << endl;
 	*/
 	//////////////////////////////////////////////////
 	
