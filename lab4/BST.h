@@ -29,7 +29,6 @@ class BST
 	
 	  void inOrderNonrec();
 	  void preOrderNonrec();
-	  void levelOrder();
 
 	
 	
@@ -48,9 +47,10 @@ private:
 	//  If you want to go
 	//  further, you can write these:
 	//
-   	     void levelOrder(BSTNode* root);
 	     void inOrderNonrec(BSTNode* root);
 	     void preOrderNonrec(BSTNode* root);
+	     
+        // and your own version of insert(BSTNode* &root, int v); 
 	///////////////////////////////
 
 };

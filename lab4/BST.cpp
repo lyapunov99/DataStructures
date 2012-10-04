@@ -10,28 +10,11 @@ void BST::insert(int v)
 	insert(root, v);
 }
 
-void BST::insert(BSTNode* &root, int v)
-{
-	//empty tree
-	if(root == NULL) {
-		root = new BSTNode;
-		root->value = v;
-		root->left = NULL;
-		root->right = NULL;
-	}
-	
-	else if(v < root->value) {
-		insert(root->left, v);
-	}
-	
-	else if(v > root->value) {
-		insert(root->right, v);
-	}
-	
-	else {
-		cout << "Duplicate ignored" << endl;
-	}
-}
+
+// void BST::insert(BSTNode* &root, int v)
+//
+// Written and compiled for you in BSTinsert.o 
+//
 
 // public functions, written for you
 
@@ -61,11 +44,6 @@ void BST::preOrderNonrec()
 	preOrderNonrec(root);
 }
 
-
-void BST::levelOrder()
-{
-	levelOrder(root);	
-}
 
 
 
@@ -109,9 +87,5 @@ void BST::preOrderNonrec(BSTNode* root)
 }
 
 
-void BST::levelOrder(BSTNode* root)
-{
-	//Do this if you have time
-}
 
 
