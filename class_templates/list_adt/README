@@ -1,0 +1,5 @@
+Done in class on Thursday, October 11, 2012
+
+Not complete but functional, you get the idea.
+
+To compile: g++ -Wall -Werror main.cpp
