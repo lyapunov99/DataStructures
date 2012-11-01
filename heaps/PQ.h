@@ -19,7 +19,6 @@ class PQ
   T *heap;
   int top;
   int size;
-  void swap(int i, int j);
   
   // Description: move an element up in the heap until it fits
   // Precondition: element at pos exists
@@ -52,11 +51,6 @@ PQ<T>::PQ(int size)
   heap = new T[size];
   this->size = size;
   top = 0;
-}
-
-template <typename T>
-void PQ<T>::swap(int i, int j)
-{
 }
 
 template <typename T>
